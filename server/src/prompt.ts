@@ -1,0 +1,1 @@
+export const prompt = " What is 2 + 2 "
