@@ -7,6 +7,8 @@ import Explore from './pages/explore'
 import Codepane from './pages/codepane'
 import Gui from './pages/gui'
 import Docs from './pages/docs'
+import Navbar from './components/navbar'
+import Dashboard from './pages/dashboard'
 
 function App() {
   const [ userPrompt, setUserPrompt ] = useState<String>("")
@@ -21,20 +23,22 @@ function App() {
 
   return (
     <>
-    HIIIIIII
-      <div>
+      {/* <div>
         <input type="text" onChange={ (e) => setUserPrompt( e.target.value ) }/>
         <button onClick={ () => { sendPrompt() } }>GENERATE</button>
         { ans ? (<div> {ans} </div>) : (<div>Insert Prompt</div>) }
-      </div>
+      </div> */}
+
+
       <BrowserRouter>
-      HELLOOOOOO
+      <Navbar/>
         <Routes>
           <Route path='/home' element={ <Home/> }></Route>
           <Route path='/explore' element={ <Explore />}></Route>
           <Route path='/codepane' element={ <Codepane />}></Route>
           <Route path='/gui' element={ <Gui /> }></Route>
           <Route path='/docs' element={ <Docs /> }></Route>
+          <Route path='/dashboard' element={ <Dashboard /> }></Route>
         </Routes>
       </BrowserRouter>
     </>

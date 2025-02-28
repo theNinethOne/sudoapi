@@ -16,6 +16,7 @@ const generative_ai_1 = require("@google/generative-ai");
 // import { prompt } from "./prompt";
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
+const fs_1 = __importDefault(require("fs"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -25,15 +26,39 @@ const API_KEY = process.env.GEMINI_API_KEY || "";
 const genAI = new generative_ai_1.GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 // const prompt = "Explain how AI works";
-app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const prompt = req.query.prompt;
-    console.log(req.query);
-    if (!prompt) {
+// app.get("/", async ( req: any, res : any ) => {
+//     const prompt = req.query.prompt
+//     //console.log( req.query )
+//     if ( !prompt) {
+//         return res.send( "No prompt. Please insert prompt to proceed." )
+//     }
+//     const result = await model.generateContent(prompt);
+//     const reply = result.response.text()
+//     //console.log( result.response.usageMetadata )
+//     return res.send( reply )
+// } )
+app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const input = req.body.input;
+    let template = `List 5 example details of the following using this schema: Details of the schema is given below. The reply must be in json format. `;
+    const prompt = template + input;
+    if (!input) {
         return res.send("No prompt. Please insert prompt to proceed.");
     }
     const result = yield model.generateContent(prompt);
     const reply = result.response.text();
-    console.log(result.response.usageMetadata);
+    function replyToJson(reply) { return reply.slice(reply.indexOf("["), reply.lastIndexOf("]") + 1); }
+    const jsonReply = replyToJson(reply);
+    console.log(jsonReply);
+    var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+    var uniqid = randLetter + Date.now();
+    const modelName = `export const Model_${uniqid} = `;
+    fs_1.default.writeFile(`src/routes/${uniqid}.ts`, modelName + jsonReply, (err) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log(" File written successfully");
+    });
     return res.send(reply);
 }));
 app.listen("3000");

@@ -1,0 +1,24 @@
+```json
+[
+  {
+    "name": "Alice Smith",
+    "college": "Stanford University"
+  },
+  {
+    "name": "Bob Johnson",
+    "college": "Massachusetts Institute of Technology"
+  },
+  {
+    "name": "Charlie Brown",
+    "college": "University of California, Berkeley"
+  },
+  {
+    "name": "Diana Miller",
+    "college": "Harvard University"
+  },
+  {
+    "name": "Eve Davis",
+    "college": "California Institute of Technology"
+  }
+]
+```
