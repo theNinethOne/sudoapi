@@ -48,7 +48,7 @@ app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const reply = result.response.text();
     function replyToJson(reply) { return reply.slice(reply.indexOf("["), reply.lastIndexOf("]") + 1); }
     const jsonReply = replyToJson(reply);
-    console.log(jsonReply);
+    //console.log( jsonReply )
     var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
     var uniqid = randLetter + Date.now();
     const modelName = `export const Model_${uniqid} = `;
@@ -59,6 +59,21 @@ app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         }
         console.log(" File written successfully");
     });
-    return res.send(reply);
+    return res.send(uniqid);
+}));
+/////////////////// Route Relay
+app.get("/routes", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const modelId = req.query.modelId;
+    //console.log( req.query )
+    fs_1.default.readFile(`src/routes/${modelId}.ts`, 'utf-8', (err, data) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        const modifiedData = data.slice(data.indexOf("["), data.lastIndexOf("]") + 1);
+        console.log(data);
+        console.log(modifiedData);
+        return res.send(modifiedData);
+    });
 }));
 app.listen("3000");

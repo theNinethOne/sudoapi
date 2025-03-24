@@ -18,6 +18,7 @@ export default function Codepane() {
         const res = await axios.post("http://localhost:3000/", { "input" : prompt })
         console.log( res )
         setAns( res.data )
+        localStorage.setItem( "modelId", res.data)
         navigate("/dashboard")
     }
 

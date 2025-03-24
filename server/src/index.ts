@@ -51,7 +51,7 @@ app.post("/", async ( req: any , res: any ) => {
     const jsonReply = replyToJson( reply )
 
     
-    console.log( jsonReply )
+    //console.log( jsonReply )
     
     var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
     var uniqid = randLetter + Date.now();
@@ -65,7 +65,24 @@ app.post("/", async ( req: any , res: any ) => {
         }
         console.log(" File written successfully")
     })
-    return res.send( reply )
+    return res.send( uniqid )
+})
+
+/////////////////// Route Relay
+
+app.get("/routes", async ( req: any, res : any ) => {
+    const modelId = req.query.modelId;
+    //console.log( req.query )
+    fs.readFile(`src/routes/${modelId}.ts`, 'utf-8', ( err, data ) => {
+        if ( err ) { 
+            console.log(err)
+            return
+        }
+        const modifiedData = data.slice( data.indexOf("["), data.lastIndexOf("]") + 1)
+        //console.log(data)
+        //console.log( modifiedData )
+        return res.send( modifiedData )
+})
 })
 
 app.listen("3000")
