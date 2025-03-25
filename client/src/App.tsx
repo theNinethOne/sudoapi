@@ -9,6 +9,7 @@ import Gui from './pages/gui'
 import Docs from './pages/docs'
 import Navbar from './components/navbar'
 import Dashboard from './pages/dashboard'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const [ userPrompt, setUserPrompt ] = useState<String>("")
@@ -31,6 +32,7 @@ function App() {
 
 
       <BrowserRouter>
+      <Toaster/>
       <Navbar/>
         <Routes>
           <Route path='/home' element={ <Home/> }></Route>

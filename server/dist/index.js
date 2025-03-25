@@ -71,8 +71,8 @@ app.get("/routes", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
             return;
         }
         const modifiedData = data.slice(data.indexOf("["), data.lastIndexOf("]") + 1);
-        console.log(data);
-        console.log(modifiedData);
+        //console.log(data)
+        //console.log( modifiedData )
         return res.send(modifiedData);
     });
 }));
