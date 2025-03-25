@@ -21,7 +21,7 @@ export default function AddCode() {
         navigate("/dashboard")
     }
     return<>
-        <div className="flex flex-col items-center  bg-slate-600 h-screen">
+        <div className="flex flex-col items-center  bg-slate-600 h-screen w-screen">
 
 <div>
     <input type="text" placeholder="Model Name" className=" bg-slate-800 p-4 m-4 w-[600px] mt-12 rounded-2xl text-white shadow-2xl"/>
