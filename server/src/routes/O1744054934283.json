@@ -1,0 +1,41 @@
+{
+  "inputTemplate": {
+    "country": "string",
+    "capital": "string",
+    "continent": "string",
+    "population": "string"
+  },
+  "details": {},
+  "data": [
+    {
+      "country": "United States",
+      "capital": "Washington, D.C.",
+      "continent": "North America",
+      "population": "331 million"
+    },
+    {
+      "country": "Japan",
+      "capital": "Tokyo",
+      "continent": "Asia",
+      "population": "126 million"
+    },
+    {
+      "country": "Brazil",
+      "capital": "Brasília",
+      "continent": "South America",
+      "population": "214 million"
+    },
+    {
+      "country": "Egypt",
+      "capital": "Cairo",
+      "continent": "Africa",
+      "population": "102 million"
+    },
+    {
+      "country": "Australia",
+      "capital": "Canberra",
+      "continent": "Australia",
+      "population": "25 million"
+    }
+  ]
+}

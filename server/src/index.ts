@@ -56,9 +56,11 @@ app.post("/", async ( req: any , res: any ) => {
     var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
     var uniqid = randLetter + Date.now();
 
-    const modelName = `export const Model_${uniqid} = `
+    const modelName = ""//`export const Model_${uniqid} = `
 
-    fs.writeFile(`src/routes/${uniqid}.ts`, modelName + jsonReply, ( err ) => {
+    const writeData = `${modelName} { "inputTemplate": ${input}, "details":{}, "data": ${jsonReply} }`
+
+    fs.writeFile(`src/routes/${uniqid}.json`, writeData, ( err ) => {
         if ( err ) { 
             console.log(err)
             return
@@ -73,15 +75,15 @@ app.post("/", async ( req: any , res: any ) => {
 app.get("/routes", async ( req: any, res : any ) => {
     const modelId = req.query.modelId;
     //console.log( req.query )
-    fs.readFile(`src/routes/${modelId}.ts`, 'utf-8', ( err, data ) => {
+    fs.readFile(`src/routes/${modelId}.json`, 'utf-8', ( err, data ) => {
         if ( err ) { 
             console.log(err)
             return
         }
-        const modifiedData = data.slice( data.indexOf("["), data.lastIndexOf("]") + 1)
+        const modifiedData = data.slice( data.lastIndexOf("["), data.indexOf("]") + 1 )
         //console.log(data)
         //console.log( modifiedData )
-        return res.send( modifiedData )
+        return res.send( data )
 })
 })
 

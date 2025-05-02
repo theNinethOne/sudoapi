@@ -51,8 +51,9 @@ app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     //console.log( jsonReply )
     var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
     var uniqid = randLetter + Date.now();
-    const modelName = `export const Model_${uniqid} = `;
-    fs_1.default.writeFile(`src/routes/${uniqid}.ts`, modelName + jsonReply, (err) => {
+    const modelName = ""; //`export const Model_${uniqid} = `
+    const writeData = `${modelName} { "inputTemplate": ${input}, "details":{}, "data": ${jsonReply} }`;
+    fs_1.default.writeFile(`src/routes/${uniqid}.json`, writeData, (err) => {
         if (err) {
             console.log(err);
             return;
@@ -65,15 +66,15 @@ app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 app.get("/routes", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const modelId = req.query.modelId;
     //console.log( req.query )
-    fs_1.default.readFile(`src/routes/${modelId}.ts`, 'utf-8', (err, data) => {
+    fs_1.default.readFile(`src/routes/${modelId}.json`, (err, data) => {
         if (err) {
             console.log(err);
             return;
         }
-        const modifiedData = data.slice(data.indexOf("["), data.lastIndexOf("]") + 1);
+        const modifiedData = data.slice(data.lastIndexOf("["), data.indexOf("]") + 1);
         //console.log(data)
         //console.log( modifiedData )
-        return res.send(modifiedData);
+        return res.send(data);
     });
 }));
 app.listen("3000");

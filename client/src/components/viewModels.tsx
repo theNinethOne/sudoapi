@@ -1,11 +1,13 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import ModelsCard from "./modelsCard"
+import ViewCode from "./viewCode"
 
 export default function ViewModels() {
 
     const [ modelId, setModelId ] = useState("")
     const [ data, setData ] = useState("")
+    const [ codeViewToggle, setCodeViewToggle ] = useState( false )
 
     async function getData(  ) {
 
@@ -19,6 +21,10 @@ export default function ViewModels() {
         return res
     }
 
+    function toggleCodeView () {
+        setCodeViewToggle( !codeViewToggle )
+    }
+
     useEffect( () => {
         getData()
     }, [] )
@@ -26,10 +32,13 @@ export default function ViewModels() {
 
 
     return<>
-    <div className="flex flex-col items-center  bg-slate-600 h-screen w-screen">
+    <div className={` ${ codeViewToggle ? 
+                            "flex flex-col justify-between bg-slate-600 h-screen w-screen"
+                            :"flex flex-col items-center bg-slate-600 h-screen w-screen"}`}>
 
-        <div>
-            <ModelsCard modelId={modelId} />
+        <div className="flex flex-row">
+            <ModelsCard modelId={modelId} viewButtonHandler={ toggleCodeView }/>
+            { codeViewToggle && <ViewCode/>}
         </div>
     </div>
     </>

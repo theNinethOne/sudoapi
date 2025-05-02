@@ -1,0 +1,41 @@
+{
+  "inputTemplate": {
+    "car": "string",
+    "brand": "string",
+    "cost": "string",
+    "model": "string"
+  },
+  "details": {},
+  "data": [
+    {
+      "car": "Sedan",
+      "brand": "Toyota",
+      "cost": "$25,000",
+      "model": "Camry"
+    },
+    {
+      "car": "SUV",
+      "brand": "Honda",
+      "cost": "$32,000",
+      "model": "CR-V"
+    },
+    {
+      "car": "Truck",
+      "brand": "Ford",
+      "cost": "$40,000",
+      "model": "F-150"
+    },
+    {
+      "car": "Hatchback",
+      "brand": "Volkswagen",
+      "cost": "$22,000",
+      "model": "Golf"
+    },
+    {
+      "car": "Sports Car",
+      "brand": "Porsche",
+      "cost": "$80,000",
+      "model": "911"
+    }
+  ]
+}
