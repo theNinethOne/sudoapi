@@ -1,0 +1,31 @@
+ { "inputTemplate": {
+    "social media" : "string",
+    "founder" : "string",
+    "year of founding" : "string"
+}, "details":{}, "data": [
+  {
+    "social media": "Facebook",
+    "founder": "Mark Zuckerberg",
+    "year of founding": "2004"
+  },
+  {
+    "social media": "Twitter",
+    "founder": "Jack Dorsey",
+    "year of founding": "2006"
+  },
+  {
+    "social media": "Instagram",
+    "founder": "Kevin Systrom and Mike Krieger",
+    "year of founding": "2010"
+  },
+  {
+    "social media": "TikTok",
+    "founder": "Zhang Yiming",
+    "year of founding": "2016"
+  },
+  {
+    "social media": "LinkedIn",
+    "founder": "Reid Hoffman",
+    "year of founding": "2002"
+  }
+] }

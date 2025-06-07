@@ -1,0 +1,25 @@
+ { "inputTemplate": {
+    "animal":"string",
+    "species":"string"
+}, "details":{}, "data": [
+  {
+    "animal": "Dog",
+    "species": "Canis lupus familiaris"
+  },
+  {
+    "animal": "Cat",
+    "species": "Felis catus"
+  },
+  {
+    "animal": "Elephant",
+    "species": "Loxodonta africana"
+  },
+  {
+    "animal": "Lion",
+    "species": "Panthera leo"
+  },
+  {
+    "animal": "Tiger",
+    "species": "Panthera tigris"
+  }
+] }

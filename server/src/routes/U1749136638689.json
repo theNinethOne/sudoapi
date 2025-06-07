@@ -1,0 +1,37 @@
+ { "inputTemplate":  {
+    "country" : "string",
+    "capital" : "string",
+    "currency" : "string",
+    "president" : "string"
+ }, "details":{}, "data": [
+  {
+    "country": "United States",
+    "capital": "Washington, D.C.",
+    "currency": "United States dollar",
+    "president": "Joe Biden"
+  },
+  {
+    "country": "Canada",
+    "capital": "Ottawa",
+    "currency": "Canadian dollar",
+    "president": "Not applicable (Head of State is King Charles III, Head of Government is Prime Minister Justin Trudeau)"
+  },
+  {
+    "country": "Brazil",
+    "capital": "Brasília",
+    "currency": "Brazilian real",
+    "president": "Luiz Inácio Lula da Silva"
+  },
+  {
+    "country": "France",
+    "capital": "Paris",
+    "currency": "Euro",
+    "president": "Emmanuel Macron"
+  },
+  {
+    "country": "Japan",
+    "capital": "Tokyo",
+    "currency": "Japanese yen",
+    "president": "Not applicable (Head of State is Emperor Naruhito, Head of Government is Prime Minister Fumio Kishida)"
+  }
+] }

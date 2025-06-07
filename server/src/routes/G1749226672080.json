@@ -1,0 +1,61 @@
+ { "inputTemplate": {
+    "scientist" : "string",
+    "country" : "string",
+    "discovery" : "string",
+    "award" : "string",
+    "birth year" : "string",
+    "death year" : "string",
+    "university" : "string",
+    "spouse" : "string"
+}, "details":{}, "data": [
+  {
+    "scientist": "Marie Curie",
+    "country": "Poland/France",
+    "discovery": "Radioactivity",
+    "award": "Nobel Prize in Physics (1903), Nobel Prize in Chemistry (1911)",
+    "birth year": "1867",
+    "death year": "1934",
+    "university": "University of Paris",
+    "spouse": "Pierre Curie"
+  },
+  {
+    "scientist": "Albert Einstein",
+    "country": "Germany/USA",
+    "discovery": "Theory of Relativity",
+    "award": "Nobel Prize in Physics (1921)",
+    "birth year": "1879",
+    "death year": "1955",
+    "university": "University of Zurich",
+    "spouse": "Mileva Marić (first), Elsa Einstein (second)"
+  },
+  {
+    "scientist": "Isaac Newton",
+    "country": "England",
+    "discovery": "Laws of Motion, Universal Gravitation",
+    "award": "President of the Royal Society",
+    "birth year": "1643",
+    "death year": "1727",
+    "university": "Trinity College, Cambridge",
+    "spouse": "None"
+  },
+  {
+    "scientist": "Charles Darwin",
+    "country": "England",
+    "discovery": "Theory of Evolution",
+    "award": "Copley Medal",
+    "birth year": "1809",
+    "death year": "1882",
+    "university": "University of Cambridge",
+    "spouse": "Emma Wedgwood"
+  },
+  {
+    "scientist": "Rosalind Franklin",
+    "country": "England",
+    "discovery": "Photo 51 (DNA structure)",
+    "award": "None (awarded posthumously in recognition of her contribution)",
+    "birth year": "1920",
+    "death year": "1958",
+    "university": "King's College London",
+    "spouse": "None"
+  }
+] }

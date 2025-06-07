@@ -1,0 +1,25 @@
+ { "inputTemplate":  {
+    "movie" : "string",
+    "year" : "string"
+ }, "details":{}, "data": [
+  {
+    "movie": "The Shawshank Redemption",
+    "year": "1994"
+  },
+  {
+    "movie": "The Godfather",
+    "year": "1972"
+  },
+  {
+    "movie": "Pulp Fiction",
+    "year": "1994"
+  },
+  {
+    "movie": "The Dark Knight",
+    "year": "2008"
+  },
+  {
+    "movie": "Schindler's List",
+    "year": "1993"
+  }
+] }

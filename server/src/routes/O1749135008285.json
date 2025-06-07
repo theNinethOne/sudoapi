@@ -1,0 +1,31 @@
+ { "inputTemplate":  {
+    "country" : "string",
+    "capital" : "string",
+    "currency" : "string"
+ }, "details":{}, "data": [
+  {
+    "country": "United States of America",
+    "capital": "Washington, D.C.",
+    "currency": "United States Dollar"
+  },
+  {
+    "country": "Japan",
+    "capital": "Tokyo",
+    "currency": "Japanese Yen"
+  },
+  {
+    "country": "France",
+    "capital": "Paris",
+    "currency": "Euro"
+  },
+  {
+    "country": "Brazil",
+    "capital": "Brasília",
+    "currency": "Brazilian Real"
+  },
+  {
+    "country": "Australia",
+    "capital": "Canberra",
+    "currency": "Australian Dollar"
+  }
+] }

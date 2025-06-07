@@ -1,0 +1,25 @@
+ { "inputTemplate": {
+    "sport" : "string",
+    "world champion" : "string"
+}, "details":{}, "data": [
+  {
+    "sport": "Swimming",
+    "world champion": "Katie Ledecky"
+  },
+  {
+    "sport": "Tennis",
+    "world champion": "Carlos Alcaraz"
+  },
+  {
+    "sport": "Golf",
+    "world champion": "Scottie Scheffler" 
+  },
+  {
+    "sport": "Athletics (100m)",
+    "world champion": "Fred Kerley"
+  },
+  {
+    "sport": "Boxing (Heavyweight)",
+    "world champion": "Oleksandr Usyk"
+  }
+] }

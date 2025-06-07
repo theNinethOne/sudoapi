@@ -1,0 +1,25 @@
+ { "inputTemplate": {
+    "country" : "string",
+    "population" : "string"
+}, "details":{}, "data": [
+  {
+    "country": "United States",
+    "population": "334,805,000"
+  },
+  {
+    "country": "India",
+    "population": "1,407,049,000"
+  },
+  {
+    "country": "China",
+    "population": "1,425,671,000"
+  },
+  {
+    "country": "Brazil",
+    "population": "216,422,446"
+  },
+  {
+    "country": "Pakistan",
+    "population": "238,140,000"
+  }
+] }

@@ -1,14 +1,16 @@
 // import CodeEditor from "./components/codeEditor"
 
 import CodeEditor from "./components/codeEditor"
+import HomePage from "./components/Homepage"
 import TopBar from "./components/topBar"
 
 function App() {
 
   return (
     <>
-    <TopBar/>
-      <CodeEditor/>
+    <HomePage/>
+    {/* <TopBar/>
+      <CodeEditor/> */}
 
     </>
   )

@@ -1,0 +1,25 @@
+ { "inputTemplate":  {
+    "name" : "string",
+    "email" : "string"
+ }, "details":{}, "data": [
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com"
+  },
+  {
+    "name": "Peter Jones",
+    "email": "peter.jones@example.com"
+  },
+  {
+    "name": "Alice Brown",
+    "email": "alice.brown@example.com"
+  },
+  {
+    "name": "Bob Williams",
+    "email": "bob.williams@example.com"
+  }
+] }

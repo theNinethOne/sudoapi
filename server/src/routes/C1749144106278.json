@@ -1,0 +1,25 @@
+ { "inputTemplate":  {
+    "movie":"string",
+    "director":"string"
+ }, "details":{}, "data": [
+  {
+    "movie": "The Shawshank Redemption",
+    "director": "Frank Darabont"
+  },
+  {
+    "movie": "Pulp Fiction",
+    "director": "Quentin Tarantino"
+  },
+  {
+    "movie": "The Godfather",
+    "director": "Francis Ford Coppola"
+  },
+  {
+    "movie": "The Dark Knight",
+    "director": "Christopher Nolan"
+  },
+  {
+    "movie": "12 Angry Men",
+    "director": "Sidney Lumet"
+  }
+] }

@@ -15,7 +15,7 @@ export default function AddCode() {
 
     async function handleSubmit() {
         const res = await axios.post("http://localhost:3000/", { "input": prompt })
-        console.log(res)
+        console.log(prompt)
         setAns(res.data)
         localStorage.setItem("modelId", res.data)
         navigate("/dashboard")

@@ -1,0 +1,5 @@
+ { "inputTemplate":  {
+    "country" : "string",
+    "capital" : "string",
+    "currency" : "string"
+ }, "details":{}, "data":  }
