@@ -33,7 +33,7 @@ const TypewriterLoop = ({ phrases , typingSpeed = 100, pauseTime = 1500, deletin
   }, [text, isDeleting, phraseIndex, charIndex, phrases, typingSpeed, deletingSpeed, pauseTime]);
 
   return (
-    <div className="font-mono text-white text-2xl">
+    <div className="font-mono text-white text-4xl">
       {text}
       <span className="animate-pulse">|</span>
     </div>
