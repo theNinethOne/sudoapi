@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import TypewriterLoop from "./typewriterLoop";
 
 export default function HomePage() {
@@ -13,7 +14,7 @@ export default function HomePage() {
       <div className=" bg-black ">
         <div className="flex flex-col items-center justify-between ">
           <TopBar />
-          <LeftSection />
+          <LeftSection  />
           <RightSection phrases={phrases} />
           <Footer />
         </div>
@@ -26,8 +27,14 @@ function LeftSection() {
   return (
     <>
       <div className="w-screen  flex flex-col items-center justify-start  h-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
-        <div className="text-7xl/24 font-bold text-center w-[1000px] h-[250px] flex justify-center">
-          Speed up development with dynamic test data.
+        <div className="text-7xl/24 font-bold text-center w-[1000px] h-[250px] flex justify-center flex-col items-center">
+        <span>
+        Speed up development with 
+        </span>
+        <div className="flex flex-row items-center w-[450px] justify-between">
+        <WordRepeater words={ ["T E S T ", "M O C K ", "F A K E "] }/>
+          <span>data.</span>
+        </div>
         </div>
 
         <div className="text-3xl font-bold text-center w-[700px] h-[200px]">
@@ -124,4 +131,24 @@ function Footer() {
       </div>
     </footer>
   );
+}
+
+
+function WordRepeater({words} : {words : string[]}){
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+  
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+      
+  },[ ])
+
+  return<>
+  <div className="text-transparent  bg-clip-text bg-gradient-to-r from-pink-600 via-amber-400 to-cyan-600">{words[currentIndex]}</div>
+  </>
 }
