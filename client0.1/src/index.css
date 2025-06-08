@@ -3,8 +3,8 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-/* 
-@keyframes float {
+
+/* @keyframes float {
   0%,
   100% {
     background-position: 0% 50%;
@@ -13,7 +13,7 @@
   50% {
     background-position: 100% 50%;
   }
-}
+} */
 
 .bg-diffused {
   background: radial-gradient(
@@ -156,4 +156,4 @@
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2),
                0 0 12px rgba(0, 191, 255, 0.4),
                0 0 16px rgba(255, 0, 150, 0.3);
-} */
+} 
