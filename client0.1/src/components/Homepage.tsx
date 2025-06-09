@@ -49,7 +49,7 @@ function LeftSection() {
         <div className="h-[100px] mt-10">
           <div
             onClick={() => navigate("/codeEditor")}
-            className="h-[70px] w-[600px] flex justify-center items-center shadow-2xl bg-diffused-inferno text-white font-bold rounded-lg border-4 border-diffused-inferno hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+            className="h-[70px] w-[600px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
           >
             Start Generating Data
           </div>
@@ -93,7 +93,7 @@ function MidSection() {
       </div>
       <div
             onClick={() => navigate("/codeEditor")}
-            className="h-[70px] w-[600px] m-10 flex justify-center items-center shadow-2xl bg-diffused-inferno text-white font-bold rounded-lg border-4 border-diffused-inferno hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+            className="h-[70px] w-[600px] m-10 flex justify-center items-center font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
           >
             Get Started
           </div>
