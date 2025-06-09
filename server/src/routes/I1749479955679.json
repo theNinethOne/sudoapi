@@ -1,0 +1,25 @@
+ { "inputTemplate": {
+    "tree":"string",
+    "fruit":"string"
+}, "details":{}, "data": [
+  {
+    "tree": "Apple Tree",
+    "fruit": "Apple"
+  },
+  {
+    "tree": "Orange Tree",
+    "fruit": "Orange"
+  },
+  {
+    "tree": "Banana Tree",
+    "fruit": "Banana"
+  },
+  {
+    "tree": "Mango Tree",
+    "fruit": "Mango"
+  },
+  {
+    "tree": "Pear Tree",
+    "fruit": "Pear"
+  }
+] }

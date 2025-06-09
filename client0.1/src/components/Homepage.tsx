@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import TypewriterLoop from "./typewriterLoop";
+import { Navigate, useNavigate } from "react-router-dom";
+import schema from "/src/assets/schema.png";
+import result from "/src/assets/result.png";
 
 export default function HomePage() {
   const phrases = [
@@ -14,7 +17,8 @@ export default function HomePage() {
       <div className=" bg-black ">
         <div className="flex flex-col items-center justify-between ">
           <TopBar />
-          <LeftSection  />
+          <LeftSection />
+          <MidSection />
           <RightSection phrases={phrases} />
           <Footer />
         </div>
@@ -24,17 +28,17 @@ export default function HomePage() {
 }
 
 function LeftSection() {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="w-screen  flex flex-col items-center justify-start  h-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
+      <div className="w-screen flex flex-col items-center justify-start  h-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
         <div className="text-7xl/24 font-bold text-center w-[1000px] h-[250px] flex justify-center flex-col items-center">
-        <span>
-        Speed up development with 
-        </span>
-        <div className="flex flex-row items-center w-[450px] justify-between">
-        <WordRepeater words={ ["T E S T ", "M O C K ", "F A K E "] }/>
-          <span>data.</span>
-        </div>
+          <span>Speed up development with</span>
+          <div className="flex flex-row items-center w-[450px] justify-between">
+            <WordRepeater words={["T E S T ", "M O C K ", "F A K E "]} />
+            <span>data.</span>
+          </div>
         </div>
 
         <div className="text-3xl font-bold text-center w-[700px] h-[200px]">
@@ -42,8 +46,11 @@ function LeftSection() {
           Get instant test data.
         </div>
 
-        <div className="h-[200px]">
-          <div className="h-[70px] w-[600px] flex justify-center items-center shadow-2xl bg-diffused-inferno text-white font-bold rounded-lg">
+        <div className="h-[100px] mt-10">
+          <div
+            onClick={() => navigate("/codeEditor")}
+            className="h-[70px] w-[600px] flex justify-center items-center shadow-2xl bg-diffused-inferno text-white font-bold rounded-lg border-4 border-diffused-inferno hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+          >
             Start Generating Data
           </div>
         </div>
@@ -55,7 +62,7 @@ function LeftSection() {
 function RightSection({ phrases }: { phrases: string[] }) {
   return (
     <>
-      <div className="w-[700px] flex flex-col items-end justify-center  h-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
+      <div className="w-[750px] p-10 m-10 flex flex-col items-end justify-center  h-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
         <div className="text-8xl/36 font-bold text-right">
           <div>D E F I N E</div>
           <div> G E N E R A T E</div>
@@ -63,6 +70,33 @@ function RightSection({ phrases }: { phrases: string[] }) {
         </div>
         <TypewriterLoop phrases={phrases} />
       </div>
+    </>
+  );
+}
+
+function MidSection() {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <div className="flex flex-row w-[1000px] m-10 p-10 justify-between items-center">
+        <div className="text-6xl/24 font-bold text-left flex flex-col text-transparent  bg-clip-text bg-gradient-to-l from-pink-500 via-yellow-300 to-cyan-400">
+          <div>Your Schema.</div>
+          <div>Your Data.</div>
+          <div>Instantly.</div>
+        </div>
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <img src={schema} alt="schema image" />
+          <img src={result} alt="result image" />
+        </div>
+        
+      </div>
+      <div
+            onClick={() => navigate("/codeEditor")}
+            className="h-[70px] w-[600px] m-10 flex justify-center items-center shadow-2xl bg-diffused-inferno text-white font-bold rounded-lg border-4 border-diffused-inferno hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+          >
+            Get Started
+          </div>
     </>
   );
 }
@@ -133,22 +167,22 @@ function Footer() {
   );
 }
 
-
-function WordRepeater({words} : {words : string[]}){
-
+function WordRepeater({ words }: { words: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-  
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
-      
-  },[ ])
+  }, []);
 
-  return<>
-  <div className="text-transparent  bg-clip-text bg-gradient-to-r from-pink-600 via-amber-400 to-cyan-600">{words[currentIndex]}</div>
-  </>
+  return (
+    <>
+      <div className="text-transparent  bg-clip-text bg-gradient-to-l from-pink-600 via-amber-400 to-cyan-600">
+        {words[currentIndex]}
+      </div>
+    </>
+  );
 }

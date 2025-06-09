@@ -1,7 +1,7 @@
-@import "tailwindcss/preflight";
+/* @import "tailwindcss/preflight"; */
 
 @import "tailwindcss";
-@tailwind utilities;
+/* @tailwind utilities; */
 
 
 /* @keyframes float {
@@ -15,7 +15,7 @@
   }
 } */
 
-.bg-diffused {
+/* .bg-diffused {
   background: radial-gradient(
       circle at 10% 20%,
       rgba(255, 0, 150, 0.3),
@@ -26,8 +26,8 @@
   background-blend-mode: screen;
   background-size: 200% 200%;
   animation: float 30s ease infinite;
-}
-
+} */
+/* 
 .bg-diffused-space {
   background: radial-gradient(
       circle at 30% 20%,
@@ -40,8 +40,8 @@
   background-blend-mode: screen;
   background-size: 200% 200%;
   animation: float 30s ease infinite;
-}
-
+} */
+/* 
 .bg-diffused-neon {
   background: radial-gradient(
       circle at 20% 30%,
@@ -54,8 +54,8 @@
   background-blend-mode: screen;
   background-size: 200% 200%;
   animation: float 30s ease infinite;
-}
-
+} */
+/* 
 .bg-diffused-pastel {
   background: radial-gradient(
       circle at 20% 30%,
@@ -75,8 +75,8 @@
   background-blend-mode: screen;
   background-size: 200% 200%;
   animation: float 30s ease infinite;
-}
-
+} */
+/* 
 .bg-diffused-cyberpunk {
   background: radial-gradient(
       circle at 15% 25%,
@@ -89,8 +89,8 @@
   background-blend-mode: screen;
   background-size: 200% 200%;
   animation: float 30s ease infinite;
-}
-
+} */
+/* 
 .bg-diffused-bioelectric {
   background: radial-gradient(
       circle at 30% 20%,
@@ -107,8 +107,8 @@
   background-blend-mode: screen;
   background-size: 200% 200%;
   animation: float 30s ease infinite;
-}
-
+} */
+/* 
 .bg-diffused-retro {
   background: radial-gradient(
       circle at 20% 30%,
@@ -121,7 +121,7 @@
   background-blend-mode: screen;
   background-size: 200% 200%;
   animation: float 30s ease infinite;
-}
+} */
 
 .bg-diffused-inferno {
   background: radial-gradient(
@@ -136,7 +136,7 @@
   background-size: 200% 200%;
   animation: float 30s ease infinite;
 }
-
+/* 
 .bg-diffused-ultraviolet {
   background: radial-gradient(
       circle at 20% 40%,
@@ -156,4 +156,4 @@
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2),
                0 0 12px rgba(0, 191, 255, 0.4),
                0 0 16px rgba(255, 0, 150, 0.3);
-} 
+}  */
