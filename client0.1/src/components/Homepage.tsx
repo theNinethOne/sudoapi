@@ -1,6 +1,6 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TypewriterLoop from "./typewriterLoop";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import schema from "/src/assets/schema.png";
 import result from "/src/assets/result.png";
 
@@ -14,7 +14,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className=" bg-black ">
+      <div className=" bg-gradient-to-b from-black via-amber-700 to-black ">
         <div className="flex flex-col items-center justify-between ">
           <TopBar />
           <LeftSection />
@@ -23,6 +23,7 @@ export default function HomePage() {
           <Footer />
         </div>
       </div>
+      
     </>
   );
 }
@@ -35,8 +36,8 @@ function LeftSection() {
       <div className="w-screen flex flex-col items-center justify-start  h-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
         <div className="text-7xl/24 font-bold text-center w-[1000px] h-[250px] flex justify-center flex-col items-center">
           <span>Speed up development with</span>
-          <div className="flex flex-row items-center w-[450px] justify-between">
-            <WordRepeater words={["T E S T ", "M O C K ", "F A K E "]} />
+          <div className="flex flex-row items-center w-[350px] justify-between">
+            <WordRepeater words={["TEST", "MOCK", "FAKE"]} />
             <span>data.</span>
           </div>
         </div>
@@ -51,7 +52,9 @@ function LeftSection() {
             onClick={() => navigate("/codeEditor")}
             className="h-[70px] w-[600px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
           >
+            <button className="text-white bg-black h-[65px] w-[595px] rounded-lg">
             Start Generating Data
+            </button>
           </div>
         </div>
       </div>
@@ -93,9 +96,9 @@ function MidSection() {
       </div>
       <div
             onClick={() => navigate("/codeEditor")}
-            className="h-[70px] w-[600px] m-10 flex justify-center items-center font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+            className="h-[70px] w-[600px] m-10 flex justify-center items-center font-bold rounded-lg bg-gradient-to-r from-pink-500 via-cyan-500 to-violet-500 cursor-pointer"
           >
-            Get Started
+            <button className="text-white bg-black h-[65px] w-[595px] rounded-lg">Get Started</button>
           </div>
     </>
   );
@@ -104,7 +107,7 @@ function MidSection() {
 function TopBar() {
   return (
     <>
-      <div className="text-6xl/32 font-bold text-left border-4 h-[150px]  w-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
+      <div className="text-6xl/32 font-bold text-left border-4 h-[150px] pl-10 w-screen text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
         F a u x DB
       </div>
     </>
@@ -180,7 +183,7 @@ function WordRepeater({ words }: { words: string[] }) {
 
   return (
     <>
-      <div className="text-transparent  bg-clip-text bg-gradient-to-l from-pink-600 via-amber-400 to-cyan-600">
+      <div className="font-mono text-transparent  bg-clip-text bg-gradient-to-l from-pink-600 via-amber-400 to-cyan-600">
         {words[currentIndex]}
       </div>
     </>
