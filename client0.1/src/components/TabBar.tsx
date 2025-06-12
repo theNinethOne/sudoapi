@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Editor from "@monaco-editor/react";
 import axios from "axios";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { atomDark, darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function TabBar() {
   const [tabs, setTabs] = useState([
@@ -171,7 +171,7 @@ export default function TabBar() {
             <SyntaxHighlighter
             
               language="json" // Specify the language
-              style={darcula} // Apply the theme (darcula, atom-dark, vs, etc.)
+              style={atomDark} // Apply the theme (darcula, atom-dark, vs, etc.)
               showLineNumbers={true} // Optional: show line numbers
               wrapLines={true} // Optional: wrap long lines
               customStyle={{

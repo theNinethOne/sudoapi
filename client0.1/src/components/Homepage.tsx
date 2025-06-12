@@ -47,12 +47,21 @@ function LeftSection() {
           Get instant test data.
         </div>
 
-        <div className="h-[100px] mt-10">
+        <div className="h-[100px] mt-10 flex flex-row justify-between items-center space-x-5">
+          <div
+            onClick={() => navigate("/promptPage")}
+            className="h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+          >
+            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg">
+            Prompt
+            </button>
+          </div>
+
           <div
             onClick={() => navigate("/codeEditor")}
-            className="h-[70px] w-[600px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+            className="h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
           >
-            <button className="text-white bg-black h-[65px] w-[595px] rounded-lg">
+            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg">
             Start Generating Data
             </button>
           </div>
