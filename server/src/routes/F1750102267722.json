@@ -1,0 +1,27 @@
+ { "inputTemplate": { "country" : "string", "capital" : "string", "area" : "string" }, "details":{}, "data": [
+  {
+    "country": "France",
+    "capital": "Paris",
+    "area": "643,801 sq km"
+  },
+  {
+    "country": "Japan",
+    "capital": "Tokyo",
+    "area": "377,972 sq km"
+  },
+  {
+    "country": "Brazil",
+    "capital": "Brasília",
+    "area": "8,515,767 sq km"
+  },
+  {
+    "country": "Canada",
+    "capital": "Ottawa",
+    "area": "9,984,670 sq km"
+  },
+  {
+    "country": "Australia",
+    "capital": "Canberra",
+    "area": "7,617,930 sq km"
+  }
+] }

@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage/>} />
       <Route path="/codeEditor" element={<CodeEditor/>} />
-      <Route path="/promptPage" element={<PromptPage/>} />
+      {/* <Route path="/promptPage" element={<PromptPage/>} /> */}
       <Route path="/pricingPage" element={<PricingPage/>} />
     </Routes>
     </BrowserRouter>

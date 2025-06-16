@@ -1,7 +1,8 @@
 import Editor from "@monaco-editor/react";
+import axios from "axios";
 import { useState } from "react";
 
-export default function PromptPage() {
+export default function PromptPage( { initTab, activeTabId, isInitRender } : { initTab : ( value : string, newTabId : number ) => void, activeTabId : number, isInitRender : () => void }) {
   const options = {
     readOnly: false,
     minimap: { enabled: false },
@@ -14,8 +15,14 @@ export default function PromptPage() {
     setUserPrompt(value);
   };
 
-  const handleSubmit = () => {
-    console.log(userPrompt);
+   async function handleSubmit() {
+    const res = await axios.post("http://localhost:3000/", {
+        input: userPrompt,
+      });
+      localStorage.setItem(`${activeTabId}`, res.data);
+    initTab( userPrompt, activeTabId );
+    setIsClicked(false);
+    isInitRender()
   };
 
   const handelInnerClick = (e : React.MouseEvent<HTMLDivElement>) => {
@@ -26,7 +33,6 @@ export default function PromptPage() {
 
   return (
     <>
-      {isClicked}
       <div onClick={() => setIsClicked(false)} className="bg-black h-screen w-screen flex justify-center items-center">
         <div className="flex flex-col items-center justify-center">
           <div className="h-[250px] w-[650px] text-8xl/24 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
@@ -42,7 +48,7 @@ export default function PromptPage() {
               theme="vs-dark"
               defaultLanguage="json"
               options={options}
-              defaultValue=" "
+              defaultValue=' { "myVariable" : "string" } '
               className=""
               value={userPrompt}
               onChange={(value) => handleEditorChange(value)}

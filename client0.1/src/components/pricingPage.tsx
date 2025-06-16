@@ -1,3 +1,5 @@
+import NavBar from "./navBar";
+
 export default function PricingPage() {
   const basicPlan = [
     "Get Started Instantly",
@@ -23,24 +25,31 @@ export default function PricingPage() {
 
   return (
     <>
-      <div className="flex flex-col bg-black h-screen items-center justify-center">
-        <div className="mb-5 font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
-          Choose a plan that fits your needs
-        </div>
+      <div className="flex flex-row w-screen bg-black">
+        <NavBar />
+        <div className="flex flex-col h-screen items-center justify-center w-full">
+          <div className="mb-5 font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
+            Choose a plan that fits your needs
+          </div>
 
-        <div className="flex flex-row mt-5">
-          <div>
-            <Plan planName="Basic" price="9.99" description={basicPlan} />
-          </div>
-          <div>
-            <Plan
-              planName="Standard"
-              price="14.99"
-              description={standardPlan}
-            />
-          </div>
-          <div>
-            <Plan planName="Premium" price="19.99" description={premiumPlan} />
+          <div className="flex flex-row mt-5">
+            <div>
+              <Plan planName="Basic" price="9.99" description={basicPlan} />
+            </div>
+            <div>
+              <Plan
+                planName="Standard"
+                price="14.99"
+                description={standardPlan}
+              />
+            </div>
+            <div>
+              <Plan
+                planName="Premium"
+                price="19.99"
+                description={premiumPlan}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -59,9 +68,9 @@ function Plan({
 }) {
   return (
     <>
-      <div className="flex items-center justify-center h-[560px] w-[310px] m-10 rounded-xl bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 hover:scale-110 hover:shadow-xl transition duration-300 ease-in-out">
+      <div className="flex items-center justify-center h-[560px] w-[310px] m-10 rounded-xl bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 hover:scale-110 hover:shadow-xl transition duration-700 ease-in-out">
         <div className="group bg-black h-[550px] w-[300px] flex flex-col items-center rounded-xl hover:bg-gradient-to-r hover:from-pink-500 hover:via-yellow-300 hover:to-cyan-400 transition">
-          <div className="p-2 m-2 font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 group-hover:text-black group-hover:scale-120 transition duration-300 ease-in-out">
+          <div className="p-2 m-2 font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 group-hover:text-black group-hover:scale-120 transition duration-900 ease-in-out">
             {planName}
           </div>
           <div className="flex items-center justify-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-l from-pink-500 via-yellow-300 to-cyan-400 group-hover:text-black hover:scale-120 transition duration-300 ease-in-out text-center h-[50px] w-[150px]">
