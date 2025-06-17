@@ -49,23 +49,45 @@ function LeftSection() {
 
         <div className="h-[100px] mt-10 flex flex-row justify-between items-center space-x-5">
           <div
-            onClick={() => navigate("/promptPage")}
-            className="h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+            onClick={() => navigate("/pricingPage")}
+            className="group h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer hover:scale-110 transition duration-700 ease-in-out"
           >
-            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg">
-            Prompt
+            <div className="bg-black"></div>
+            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg group-hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 group-hover:text-black group-hover:text-5xl transition duration-300 ease-in-out">
+            Pricing
             </button>
           </div>
 
           <div
             onClick={() => navigate("/codeEditor")}
-            className="h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer"
+            className="h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer hover:scale-110 transition duration-500 ease-in-out"
           >
-            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg">
-            Start Generating Data
+            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 hover:text-black hover:text-5xl transition duration-300 ease-in-out">
+            Generate
             </button>
           </div>
         </div>
+
+        <div className="h-[100px] mt-2 flex flex-row justify-between items-center space-x-5">
+          <div
+            onClick={() => navigate("/formsPage")}
+            className="h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer hover:scale-110 transition duration-700 ease-in-out"
+          >
+            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 hover:text-black hover:text-5xl transition duration-300 ease-in-out">
+            Forms
+            </button>
+          </div>
+
+          <div
+            onClick={() => navigate("/promptInteractivePage")}
+            className="h-[70px] w-[300px] flex justify-center items-center text-black font-bold rounded-lg bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 cursor-pointer hover:scale-110 transition duration-700 ease-in-out"
+          >
+            <button className="text-white bg-black h-[65px] w-[295px] rounded-lg hover:bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400 hover:text-black hover:text-5xl transition duration-300 ease-in-out">
+            Prompt
+            </button>
+          </div>
+        </div>
+
       </div>
     </>
   );

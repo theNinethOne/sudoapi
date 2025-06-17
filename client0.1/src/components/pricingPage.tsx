@@ -1,5 +1,3 @@
-import NavBar from "./navBar";
-
 export default function PricingPage() {
   const basicPlan = [
     "Get Started Instantly",
@@ -26,7 +24,6 @@ export default function PricingPage() {
   return (
     <>
       <div className="flex flex-row w-screen bg-black">
-        <NavBar />
         <div className="flex flex-col h-screen items-center justify-center w-full">
           <div className="mb-5 font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-300 to-cyan-400">
             Choose a plan that fits your needs
